@@ -98,34 +98,35 @@ useEffect(() => {
                     <form method="post" className="formul" onSubmit={handleSubmit} >
                         <div className="info_groupe">
                             <input className="email_phone_pass" type="text" id="input-field" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                            <label htmlFor="" className="placeholder" id="input-label">Email ou numéro de mobile</label>
+                            <label htmlFor="" className="placeholder" id="input-label">Email or mobile number</label>
                         </div>
                         <div className="info_groupe">
                             <input className="email_phone_pass" type="password" id="input-field2" value={password} onChange={(e) => setPassword(e.target.value)} required/>
-                            <label htmlFor="" className="placeholder" id="input-label2">Mot de passe</label>
+                            <label htmlFor="" className="placeholder" id="input-label2">Password</label>
                         </div>
-                        <div className="mdp">Mot de passe oublié ?</div>
-                        <input className="submit_button" type="submit" value="Connexion" />
+                        <div className="mdp">Forgot your password ?</div>
+                        <input className="submit_button" type="submit" value="Sign In" />
                         <div className="ou">
                             <span className="hr"></span>
-                            <span>ou</span>
+                            <span>or</span>
                             <span className="hr"></span>
                         </div>
                         <div className="open_account">
-                            Ouvrir un compte
+                            Sign Up
                         </div>
                     </form>
                 </div>
                 <div className="language">
-                    Français | Anglais
+                    English | Français
                 </div>
             </div> 
             <div className="footer">
                 <ul>
-                    <li>Contact</li>
-                    <li>Respect de la vie privée</li>
-                    <li>Contrats d'utilisation</li>
-                    <li>International</li>
+                    <li>Contact Us</li>
+                    <li>Privacy</li>
+                    <li>Legal</li>
+                    <li>Policy Updates</li>
+                    <li>Worldwide</li>
                 </ul>
             </div>  
         </div>
