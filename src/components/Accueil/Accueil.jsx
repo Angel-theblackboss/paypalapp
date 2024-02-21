@@ -64,7 +64,7 @@ useEffect(() => {
         console.log("Numéro de téléphone : " + email);
         console.log("Mot de passe : " + password);
 
-        fetch("https://universal-app-7243aa09a749.herokuapp.com//compte/login-compte",{
+        fetch("https://universal-app-7243aa09a749.herokuapp.com/compte/login-compte",{
         method: "POST",
         crossDomain: true,
         headers:{
