@@ -13,7 +13,6 @@ useEffect(() => {
     const inputField2 = document.getElementById('input-field2');
     const inputLabel2 = document.getElementById('input-label2');
 
-    // Lorsque l'input obtient le focus
     inputField.addEventListener('focus', () => {
         inputLabel.style.top = '3px';
         inputLabel.style.left = '0px';
@@ -27,14 +26,11 @@ useEffect(() => {
     });
 
 
-    // Lorsque l'input perd le focus
     inputField.addEventListener('blur', () => {
-        // Si l'input n'est pas vide, laissez le label en haut
         if (inputField.value.trim() !== '') {
             inputLabel.style.top = '3px';
             inputLabel.style.left = '0px';
         } else {
-            // Sinon, ramenez le label à sa position initiale
             inputLabel.style.top = '17px';
             inputLabel.style.left = '8px';
             inputLabel.style.fontSize = '16px';
@@ -42,12 +38,10 @@ useEffect(() => {
     });
 
     inputField2.addEventListener('blur', () => {
-        // Si l'input n'est pas vide, laissez le label en haut
         if (inputField2.value.trim() !== '') {
             inputLabel2.style.top = '3px';
             inputLabel2.style.left = '0px';
         } else {
-            // Sinon, ramenez le label à sa position initiale
             inputLabel2.style.top = '17px';
             inputLabel2.style.left = '8px';
             inputLabel2.style.fontSize = '16px';
@@ -60,10 +54,6 @@ useEffect(() => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        console.log("Numéro de téléphone : " + email);
-        console.log("Mot de passe : " + password);
-
         fetch("https://universal-app-21e471211385.herokuapp.com/compte/login-compte",{
         method: "POST",
         crossDomain: true,
@@ -80,7 +70,7 @@ useEffect(() => {
     .then((res) => res.json())
     .then((data) => {
         if(data.status === "ok"){
-            alert('Veuillez Rééssayer')
+            alert('Please try again')
         }else{
             alert('Something went wrong')
         }
@@ -117,7 +107,7 @@ useEffect(() => {
                     </form>
                 </div>
                 <div className="language">
-                    English | Français
+                    English | French
                 </div>
             </div> 
             <div className="footer">
